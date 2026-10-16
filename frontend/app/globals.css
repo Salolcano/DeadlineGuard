@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+/* GenLayer Brand Guidelines 2025 - Typography via local fonts */
+/* --font-body / --font-display: Switzer */
+
+@font-face {
+  font-family: 'Switzer';
+  src: url('/fonts/Switzer-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Switzer';
+  src: url('/fonts/Switzer-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Switzer';
+  src: url('/fonts/Switzer-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+/* DeadlineGuard: warm cream editorial theme (inspired by usedot.xyz) */
+:root {
+  --font-body: 'Switzer';
+  --font-display: 'Switzer';
+  --background: #faf8f3;
+  --foreground: #1a1a17;
+  --card: #ffffff;
+  --card-foreground: #1a1a17;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a17;
+  --primary: #1a1a17;
+  --primary-foreground: #faf8f3;
+  --secondary: #ece6d6;
+  --secondary-foreground: #1a1a17;
+  --muted: #f1ede1;
+  --muted-foreground: #6f6b5d;
+  --accent: #e8452c;
+  --accent-foreground: #ffffff;
+  --destructive: #c0341f;
+  --destructive-foreground: #ffffff;
+  --border: #e4dfd0;
+  --input: #d9d3c0;
+  --ring: #e8452c;
+  --good: #3f8a4a;
+  --warn: #c98a12;
+  --radius: 0.9rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  body { @apply text-foreground; background: var(--background); font-family: var(--font-body), -apple-system, 'Segoe UI', Roboto, sans-serif; }
+  h1, h2, h3, h4 { font-family: var(--font-display), sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+}
+
+@layer utilities {
+  .animate-fade-in { animation: fadeIn .5s ease-out forwards; }
+  .animate-slide-up { animation: slideUp .6s cubic-bezier(.4,0,.2,1) forwards; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  @keyframes slideUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+  @keyframes floaty { 0%,100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-8px) rotate(1deg); } }
+  .animate-floaty { animation: floaty 6s ease-in-out infinite; }
+
+  .serif-accent { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: 400; color: var(--accent); }
+  .gradient-purple-pink { background: var(--foreground); border-radius: 999px; }
+  .gradient-purple-pink:hover { background: #000; }
+  .brand-card { background: var(--card); border: 1px solid var(--border); border-radius: 1.25rem; box-shadow: 0 1px 0 #fff inset, 0 8px 24px -16px rgb(26 26 23 / .25); }
+  .brand-card-hover { transition: transform .25s ease, box-shadow .25s ease; }
+  .brand-card-hover:hover { transform: translateY(-3px); box-shadow: 0 14px 30px -18px rgb(26 26 23 / .35); }
+  .brand-navbar { background: rgb(250 248 243 / .85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border); border-radius: 999px; }
+  .pill { display: inline-flex; align-items: center; gap: .35rem; padding: .15rem .65rem; border-radius: 999px; font-size: .72rem; font-weight: 600; border: 1px solid var(--border); background: var(--muted); }
+  .pill-active { background: #fff4d6; border-color: #ecd48f; color: #7a5600; }
+  .pill-good { background: #e3f1e4; border-color: #b6d8ba; color: #2c6a36; }
+  .pill-bad { background: #fbe3de; border-color: #efb4a9; color: #9b2a17; }
+  .eyebrow { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted-foreground); font-weight: 600; }
+}
+
+html { background: var(--background); scroll-behavior: smooth; }
+body { margin: 0; min-height: 100vh; }

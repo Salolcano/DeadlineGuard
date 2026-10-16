@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" fill="none" stroke="#1a1a17" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="320" cy="400" rx="230" ry="16" fill="#ece6d6" stroke="none"/>
+<rect x="40" y="120" width="230" height="200" rx="14" fill="#fff" transform="rotate(-4 155 220)"/>
+<path d="M40 154h230" transform="rotate(-4 155 220)"/><circle cx="62" cy="137" r="5" fill="#e8452c" stroke="none" transform="rotate(-4 155 220)"/><circle cx="80" cy="137" r="5" fill="#e9c46a" stroke="none" transform="rotate(-4 155 220)"/><circle cx="98" cy="137" r="5" fill="#7bb274" stroke="none" transform="rotate(-4 155 220)"/>
+<g transform="rotate(-4 155 220)"><path d="M62 190h120M62 218h160M62 246h90" stroke="#bdb6a3"/><rect x="62" y="270" width="150" height="14" rx="7" fill="#7bb274"/><text x="62" y="310" font-family="monospace" font-size="15" fill="#1a1a17" stroke="none">uptime 99.97%</text></g>
+<path d="M410 70l108 38v90c0 78-48 124-108 150-60-26-108-72-108-150v-90z" fill="#faf8f3" stroke-width="4"/>
+<path d="M410 96l82 29v73c0 60-36 98-82 120-46-22-82-60-82-120v-73z" fill="#ece6d6" stroke="none"/>
+<circle cx="410" cy="206" r="52" fill="#fff"/><path d="M410 172v36l24 16"/><path d="M410 160v4M410 248v4M366 206h4M450 206h4"/>
+<path d="M388 318l16 18 36-40" stroke="#7bb274" stroke-width="7"/>
+<g fill="#e9c46a"><ellipse cx="548" cy="352" rx="46" ry="12"/><ellipse cx="548" cy="334" rx="46" ry="12"/><ellipse cx="548" cy="316" rx="46" ry="12"/><ellipse cx="548" cy="298" rx="46" ry="12"/></g>
+<text x="536" y="302" font-family="monospace" font-size="14" stroke="none" fill="#1a1a17">GEN</text>
+<path d="M270 210c40-6 40 6 80 0" stroke="#e8452c" stroke-dasharray="2 9" stroke-width="4"/>
+<path d="M586 168l7-18 7 18 18 7-18 7-7 18-7-18-18-7z" fill="#e8452c" stroke="none"/>
+<path d="M58 372l-6-14 14 6z" fill="#e8452c" stroke="none"/>
+</svg>
